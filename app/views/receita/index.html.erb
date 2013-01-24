@@ -1,0 +1,29 @@
+<h1>Listing receita</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Email</th>
+    <th>Telefone</th>
+    <th>Receita</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @receita.each do |receitum| %>
+  <tr>
+    <td><%= receitum.nome %></td>
+    <td><%= receitum.email %></td>
+    <td><%= receitum.telefone %></td>
+    <td><%= receitum.receita %></td>
+    <td><%= link_to 'Show', receitum %></td>
+    <td><%= link_to 'Edit', edit_receitum_path(receitum) %></td>
+    <td><%= link_to 'Destroy', receitum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Receitum', new_receitum_path %>

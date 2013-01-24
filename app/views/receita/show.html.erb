@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nome:</b>
+  <%= @receitum.nome %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @receitum.email %>
+</p>
+
+<p>
+  <b>Telefone:</b>
+  <%= @receitum.telefone %>
+</p>
+
+<p>
+  <b>Receita:</b>
+  <%= @receitum.receita %>
+</p>
+
+
+<%= link_to 'Edit', edit_receitum_path(@receitum) %> |
+<%= link_to 'Back', receita_path %>
