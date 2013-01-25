@@ -1,3 +1,4 @@
+<div class="container">
 <%= form_for(@receitum) do |f| %>
   <% if @receitum.errors.any? %>
     <div id="error_explanation">
@@ -24,10 +25,11 @@
     <%= f.text_field :telefone %>
   </div>
   <div class="field">
-    <%= f.label :receita %><br />
+    <%= f.label :receita, "Criar Receita" %><br />
     <%= f.text_area :receita %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div>
+    <%= f.submit "Enviar", :class => 'btn btn-large btn-primary' %>
   </div>
 <% end %>
+</div>
